@@ -121,7 +121,10 @@ def main():
                     front_matter = yaml.safe_load(front_matter_match.group(1))
                     
                     # 检查是否需要翻译
-                    if front_matter.get('auto_translate', False) and should_translate(file_path):
+                    auto_translate = front_matter.get('auto_translate', False)
+                    has_lng_pair = 'lng_pair' in front_matter
+                    
+                    if auto_translate and (not has_lng_pair or should_translate(file_path)):
                         process_file(file_path)
                 else:
                     print(f"警告: 文件 {file_path} 没有有效的front matter")

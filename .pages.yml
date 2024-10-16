@@ -1,0 +1,120 @@
+media: assets/upload
+
+content:
+  - name: posts
+    label: 文章
+    type: collection
+    path: '_posts'
+    filename: '{year}-{month}-{day}-{fields.title}-{hour}{minute}{second}.md'
+    view:
+      fields: [ title, published, date, category, tags ]
+      sort: [ meta_modify_date, date, title ]
+    fields:
+      - name: title
+        label: 文章标题
+        type: string
+        required: true
+
+      - name: author
+        label: 作者
+        type: string
+        required: false
+        
+      - name: meta_description
+        label: 页面简述
+        type: string
+        required: false
+
+      - name: img
+        label: 封面图
+        type: image
+        required: true
+
+      - name: date
+        label: 发布日期
+        type: date
+        required: true
+        options:
+         format: "yyyy-MM-dd HH:mm:ss xx"
+
+      - name: category
+        label: 分类
+        type: select
+        options:
+          values: [ 猫档案, 活动, 报告 ]
+        required: true
+
+      - name: tags
+        label: 标签
+        type: select
+        list: true
+        options:
+          values:
+            - 延长校区
+            - 宝山校区
+            - 嘉定校区
+            - 待领养
+            - 已领养
+            - 已绝育
+            - 失踪中
+        required: true
+
+      - name: auto_translate
+        label: 自动翻译英文版
+        type: boolean
+        required: false
+        default: true
+
+      - name: image_viewer_on
+        label: 启用图片查看器
+        type: boolean
+        required: false
+        default: false
+
+      - name: image_lazy_loader_on
+        label: 启用图片懒加载
+        type: boolean
+        required: false
+        default: true
+
+      - name: on_site_search_exclude
+        label: 排除站内搜索
+        type: boolean
+        required: false
+        default: false
+
+      - name: search_engine_exclude
+        label: 排除搜索引擎
+        type: boolean
+        required: false
+        default: false
+
+      - name: comments_disable
+        label: 禁用评论
+        type: boolean
+        required: false
+        default: false
+
+      - name: published
+        label: 发布状态
+        type: boolean
+        required: false
+        default: true
+
+      - name: archive
+        label: 归档至回溯
+        type: boolean
+        required: false
+        default: false
+
+      - name: archive_date
+        label: 归档时间
+        type: date
+        required: false
+        options:
+         format: "yyyy-MM-dd HH:mm:ss xx"
+
+      - name: body
+        label: 文章内容
+        type: rich-text
+        required: false

@@ -14,6 +14,10 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+  # Triggered by repository dispatch event
+  repository_dispatch:
+    types: [trigger-jekyll-build]
+
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
@@ -31,11 +35,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Check runner
-        run: |
-          echo "Runner OS: ${{ runner.os }}"
-          echo "Runner architecture: ${{ runner.arch }}"
-          echo "Runner name: ${{ runner.name }}"
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Ruby

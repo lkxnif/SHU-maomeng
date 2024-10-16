@@ -1,0 +1,106 @@
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+{% assign page_title = page.title | default: site.data.lang[lng][page.layout].title -%}
+{%- include util/auto-content-post-title-rename.liquid title = page_title -%}
+{%- capture page_title_tag -%} {{ site.data.owner[lng].brand }} - {{ page_title }} {%- endcapture -%}
+
+{%- if  page.layout == 'post' -%}
+<title>{{ page_title | truncate: 60 }}</title>
+{%- else -%}
+<title>{{ page_title_tag | truncate: 60 }}</title>
+{%- endif %}
+
+{%- if site.data.conf.main.google_font_load_in_head -%}
+  {%- include default/header/google-font-load.html %}
+{%- endif %}
+
+{% if site.data.owner[lng].google_analytics_id != empty and site.data.owner[lng].google_analytics_id != nil and jekyll.environment != site.data.conf.main.google.analytics.ignore -%}
+  <link rel="preconnect dns-prefetch" href="https://www.googletagmanager.com" crossorigin>
+{%- endif -%}
+
+{%-comment-%} Standard icons {%-endcomment%}
+<link rel="shortcut icon" href="{{ site.baseurl }}/assets/img/favicons/favicon.ico">
+<link rel="icon" type="image/svg+xml" href="{{ site.baseurl }}/assets/img/favicons/favicon.svg">
+<link rel="icon" type="image/png" sizes="48x48" href="{{ site.baseurl }}/assets/img/favicons/favicon-48x48.png">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/img/favicons/apple-touch-icon.png">
+
+<!-- Add safari pinned tab icon -->
+<link rel="mask-icon" href="{{ site.baseurl }}/assets/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+
+<!-- Add browserconfig.xml meta tag -->
+<meta name="msapplication-config" content="{{ site.baseurl }}/assets/img/favicons/browserconfig.xml">
+
+<!-- Preload critical assets -->
+<link rel="preload" href="{{ site.baseurl }}/assets/css/main.css" as="style">
+<link rel="preload" href="{{ site.baseurl }}/assets/js/main.js" as="script">
+
+{%- if page.search_engine_exclude == true %}
+  {%-comment-%} follow because all pages have navigation (links) {%-endcomment-%}
+  <meta name="robots" content="noindex, follow">
+{%- endif %}
+
+{%- if site.data.conf.main.meta.schema_markup_google_sitelinks_searchbox == false %}
+  <meta name="google" content="nositelinkssearchbox">
+{%- endif %}
+
+{%- if site.data.conf.main.meta.google_site_verify and site.data.owner[lng].google_site_verification != empty and site.data.owner[lng].google_site_verification != nil and jekyll.environment != site.data.conf.main.google.site_verification.ignore %}
+  <meta name="google-site-verification" content="{{ site.data.owner[lng].google_site_verification }}">
+{%- endif %}
+
+{%- if site.data.conf.main.meta.mobile_app %}
+  {%- include default/header/meta-mobile-app.html %}
+{%- endif %}
+
+{%- if page.search_engine_exclude != true and page.layout != "redirect" %}
+  {%- if site.data.conf.main.meta.hreflang %}
+    {%- include default/header/meta-hreflang.html pages=nil lng_pair=page.lng_pair layout=page.layout head=nil hreflang=true open_graph=nil -%}
+  {%- endif -%}
+
+  {%- include default/header/meta-common-data.liquid %}
+
+  {%- if site.data.conf.main.meta.keywords and meta_keywords.size > 0 %}
+    <meta name="keywords" content="{{ meta_keywords | join: ', ' }}">
+  {%- endif %}
+
+  <meta name="description" content="{{ meta_desc | truncate: 150 }}">
+  <meta name="robots" content="index, follow">
+
+  {%- if site.data.conf.main.meta.twitter_card %}
+    {%- include default/header/meta-twitter.html %}
+  {%- endif -%}
+
+  {%- if site.data.conf.main.meta.open_graph %}
+    {%- include default/header/meta-open-graph.html %}
+  {%- endif -%}
+
+  {%- if site.data.conf.main.meta.schema_markup %}
+    {%- include default/header/meta-schema-markup.html %}
+  {%- endif %}
+{%- endif %}
+
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+
+<link rel="manifest" href="{{ site.baseurl }}/manifest.json">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="{{ site.data.owner[lng].brand }}">
+
+<!-- PWA related meta tags -->
+<meta name="application-name" content="{{ site.data.owner[lng].brand }}">
+<meta name="format-detection" content="telephone=no">
+<meta name="mobile-web-app-capable" content="yes">
+
+<!-- iOS specific meta tags -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+
+<!-- Browser specific meta tags -->
+<meta name="application-name" content="{{ site.data.owner[lng].brand }}">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">

@@ -1,0 +1,26 @@
+
+
+# Post share links
+# for icons https://fontawesome.com/v4.7/icons/
+# for links https://github.com/bradvin/social-share-urls
+# only {url}, {title}, {text} are supported. {title} and {text} are the same.
+# keys need to match with share. Tooltip definitions in _data/lang/[language].yml file
+
+- twitter:
+  icon: "fa-brands fa-twitter"
+  url: "https://twitter.com/intent/tweet?url={url}&text={title}"
+- facebook:
+  icon: "fa-brands fa-facebook"
+  url: "https://www.facebook.com/sharer/sharer.php?u={url}"
+- telegram:
+  icon: "fa-brands fa-telegram"
+  url: "https://t.me/share/url?url={url}&text={text}"
+- linkedin:
+  icon: "fa-brands fa-linkedin"
+  url: "https://www.linkedin.com/sharing/share-offsite/?url={url}"
+- email:
+  icon: "fa-regular fa-envelope"
+  url: "mailto:?subject={title}&body={title}%20{url}"
+- copy_link:
+  icon: "fa-solid fa-link"
+  url: ""

@@ -1,0 +1,15 @@
+---
+
+
+layout: none
+permalink: /robots.txt
+# search engine robots.txt https://www.robotstxt.org/orig.html
+# Disallow: Any empty value, indicates that all URLs can be retrieved. At least one Disallow field needs to be present in a record.
+# ex:
+# Disallow: # Allow everything
+# Disallow: / # Disallow everything
+---
+User-agent: *
+Disallow:
+
+Sitemap: {{ 'assets/sitemap.xml' | absolute_url }}

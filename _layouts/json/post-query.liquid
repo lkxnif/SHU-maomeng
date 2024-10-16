@@ -1,0 +1,10 @@
+---
+
+
+layout: util/compress
+---
+{%- include multi_lng/get-pages-by-lng.liquid pages = site.posts -%}
+{%- include json/post-query-data.liquid posts=lng_pages -%}
+
+{%- include json/remove-last-comma.liquid json=post_query_json_out -%}
+{{ trim_json_out }}

@@ -1,0 +1,44 @@
+
+
+# The contact account constants
+# for icons please check this page https://fontawesome.com/v4.7/icons/
+#   ex:   icon: "fa fa-github"
+# you can also add svg or png images as icons (local (starts with '/') or http:// or https://)
+#   ex:   icon: "/assets/img/default/sample.svg"
+#         icon: "https://www.example.com/sample.svg"
+#   * only black colored and transparent backgrounded svg or png images are supported.
+#   * the image should be square
+# keys need to match with accounts in _data/owner/[language].yml file
+
+github:
+  icon: "fa-brands fa-github"
+  url: "https://github.com"
+email:
+  icon: "fa-regular fa-envelope"
+  url: ""
+linkedin:
+  icon: "fa-brands fa-linkedin"
+  url: "https://www.linkedin.com/in"
+twitter:
+  icon: "fa-brands fa-twitter"
+  url: "https://twitter.com"
+mastodon:
+# The mastodon svg file was obtained from this link: https://github.com/mastodon/joinmastodon/blob/master/public/logos/logo-black.svg
+  icon: "/assets/img/default/mastodon.svg"
+  url: "https://mastodon.social"
+instagram:
+  icon: "fa-brands fa-instagram"
+  url: "https://www.instagram.com"
+youtube:
+  icon: "fa-brands fa-youtube"
+  url: "https://www.youtube.com/channel/"
+facebook:
+  icon: "fa-brands fa-facebook"
+  url: "https://www.facebook.com"
+bilibili:
+  icon: "fa-brands fa-bilibili"
+  url: "https://space.bilibili.com"
+# add your new contact
+# your_new_contact:
+#   icon: "fa-solid fa-font"
+#   url: "https://www.example.com"

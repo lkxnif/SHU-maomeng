@@ -1,0 +1,52 @@
+name: Update post modified dates
+
+on:
+  workflow_run:
+    workflows: ["Deploy Jekyll site to Pages"]
+    types:
+      - completed
+
+jobs:
+  update-modified-dates:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4  
+        with:
+          fetch-depth: 0
+
+      - name: Pull latest changes
+        run: |
+          git pull origin main
+          git fetch --all
+
+      - name: Update modified dates
+        run: |
+          # 获取最近一次提交修改的文件列表
+          changed_files=$(git diff-tree --no-commit-id --name-only -r HEAD)
+          
+          for file in $changed_files; do
+            if [[ $file == _posts/* ]] && [[ $file == *.md || $file == *.markdown ]] && [[ -f "$file" ]]; then
+              file_commit_date=$(git log -1 --format=%ad --date=format:'%Y-%m-%d %H:%M:%S %z' -- "$file")
+              
+              # 更新或添加 front matter 中的 meta_modify_date
+              if grep -q "^meta_modify_date:" "$file"; then
+                sed -i "/^---/,/^---/{s/^meta_modify_date:.*$/meta_modify_date: $file_commit_date/}" "$file"
+              else
+                sed -i "/^---/a meta_modify_date: $file_commit_date" "$file"
+              fi
+              
+              # 删除内容中的 meta_modify_date 行
+              sed -i '/^---/,/^---/!{/^meta_modify_date:/d}' "$file"
+              
+              echo "Updated meta_modify_date and cleaned content for $file"
+            fi
+          done
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add _posts
+          git diff-index --quiet HEAD || (git commit -m "Update post modified dates" && git push)

@@ -1,0 +1,80 @@
+{
+  "appVersion": "0.1.0",
+  "appVersionCode": 1,
+  "backgroundColor": "#FFFFFF",
+  "display": "standalone",
+  "enableNotifications": true,
+  "enableSiteSettingsShortcut": true,
+  "fallbackType": "customtabs",
+  "features": {
+    "locationDelegation": {
+      "enabled": true
+    },
+    "playBilling": {
+      "enabled": false
+    }
+  },
+  "host": "https://lkxnif.github.io/shu-maomeng",
+  "iconUrl": "https://lkxnif.github.io/shu-maomeng/assets/img/favicons/android-chrome-512x512.png",
+  "maskableIconUrl": "https://lkxnif.github.io/shu-maomeng/assets/img/favicons/android-chrome-512x512.png",
+  "monochromeIconUrl": "https://lkxnif.github.io/shu-maomeng/assets/img/favicons/android-chrome-512x512.png",
+  "includeSourceCode": false,
+  "isChromeOSOnly": false,
+  "launcherName": "上大猫盟",
+  "name": "上海大学猫盟",
+  "navigationColor": "#FFFFFF",
+  "navigationColorDark": "#FFFFFF",
+  "navigationDividerColor": "#FFFFFF",
+  "navigationDividerColorDark": "#FFFFFF",
+  "orientation": "any",
+  "packageId": "online.maomeng.shu_maomeng",
+  "shortcuts": [
+    {
+      "name": "首页",
+      "url": "/shu-maomeng/",
+      "description": "上海大学猫盟首页"
+    },
+    {
+      "name": "猫谱",
+      "url": "/shu-maomeng/tabs/blog/",
+      "description": "查看小猫档案"
+    },
+    {
+      "name": "回溯",
+      "url": "/shu-maomeng/tabs/archive.html",
+      "description": "查看过去的小猫"
+    },
+    {
+      "name": "科普",
+      "url": "/shu-maomeng/tabs/projects.html",
+      "description": "查看校内救助活动"
+    },
+    {
+      "name": "盟友",
+      "url": "/shu-maomeng/tabs/links.html",
+      "description": "查看谁在支持我们"
+    },
+    {
+      "name": "我们",
+      "url": "/shu-maomeng/tabs/about.html",
+      "description": "了解我们"
+    }
+  ],
+  "signing": {
+    "file": null,
+    "alias": "my-key-alias",
+    "fullName": "Admin",
+    "organization": "PWABuilder",
+    "organizationalUnit": "Engineering",
+    "countryCode": "US",
+    "keyPassword": "",
+    "storePassword": ""
+  },
+  "signingMode": "new",
+  "splashScreenFadeOutDuration": 300,
+  "startUrl": "/shu-maomeng/",
+  "themeColor": "#FFFFFF",
+  "themeColorDark": "#FFFFFF",
+  "shareTarget": [],
+  "webManifestUrl": "https://lkxnif.github.io/shu-maomeng/manifest.json"
+}

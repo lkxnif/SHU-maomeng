@@ -1,0 +1,48 @@
+name: Auto Translate Posts
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'  # 每周日午夜运行
+  workflow_dispatch:  # 允许手动触发
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  translate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 获取完整的git历史
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+          
+      - uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+          
+      - name: Install dependencies
+        run: |
+          pip install pyyaml requests
+
+      - name: Run translation script
+        env:
+          MS_TRANSLATOR_KEY: ${{ secrets.MS_TRANSLATOR_KEY }}
+          MS_TRANSLATOR_REGION: ${{ secrets.MS_TRANSLATOR_REGION }}
+        run: python .github/scripts/translate_posts.py
+          
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git diff --quiet && git diff --staged --quiet || git commit -m "Auto translate posts"
+          git push

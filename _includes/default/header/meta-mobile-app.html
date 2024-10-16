@@ -1,0 +1,22 @@
+
+{%- assign app_name = site.data.owner[site.data.conf.main.default_lng].brand | append: "'s App" %}
+{%-comment-%} 确保使用正确的 URL {%-endcomment%}
+<link rel="manifest" href="{{ site.url }}{{ site.baseurl }}/manifest.json">
+
+{%- if site.data.conf.main.meta.android_mobile_app %}
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#f0f0f0">
+{%- endif %}
+
+{%- if site.data.conf.main.meta.ios_mobile_app %}
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="{{ app_name }}">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+{%- endif %}
+
+{%- if site.data.conf.main.meta.win_phone_app %}
+  <meta name="msapplication-TileColor" content="#2d89ef">
+  <meta name="msapplication-starturl" content="{{ site.url }}{{ site.baseurl }}/">
+  <meta name="application-name" content="{{ app_name }}">
+  <meta name="msapplication-config" content="{{ site.url }}{{ site.baseurl }}/assets/img/favicons/browserconfig.xml">
+{%- endif %}

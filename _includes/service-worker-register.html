@@ -1,0 +1,11 @@
+<script>
+  if (typeof navigator.serviceWorker !== 'undefined') {
+    navigator.serviceWorker.register('{{ "/pwabuilder-sw.js" | relative_url }}')
+      .then(function(registration) {
+        console.log('Service Worker registered with scope:', registration.scope);
+      })
+      .catch(function(error) {
+        console.log('Service Worker registration failed:', error);
+      });
+  }
+</script>

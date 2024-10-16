@@ -1,0 +1,97 @@
+# you can move this content to front matter of [language]/tabs/projects.md
+###########################################################
+#                Projects Page Data
+###########################################################
+page_data:
+  main:
+    header: "相关科普"
+    info: "你的项目页面描述。"
+    text_color: "white"
+    # if you don't want to use background image, comment it. back_color will be activated.
+    img: ":projects-heading.jpg"
+    back_color: "浅蓝色"
+
+  category:
+    - title: "救助"
+      type: id_help
+      color: "gray"
+    - title: "领养"
+      type: id_adopt
+      color: "#62b462"
+    - title: "教程"
+      type: id_foster
+      color: "#2FD0ED"
+
+  list:
+    - type: id_help
+      project_name: "禁忌食物"
+      project_excerpt: "救助"
+      img: ":project1_thumb.jpg"
+      img_title: "img title1"
+      date: "2024-10-12"
+      post: |
+        <u><strong>警记：不要投喂人类食物</strong></u>
+        - ❌**常见错误投喂**：火腿肠、牛奶。引起肠胃反应，造成腹泻等状况。
+        - 💀**严重危害投喂**：巧克力、葡萄制品、大葱、洋葱等。对猫有毒，引起急性肾衰竭、溶血性贫血，危及生命。
+        - 🚨**风险隐患险投喂**：酸性的各类水果、香辛料制的肉类、乌贼等海产。刺激消化系统，导致消化不良或过敏反应。
+
+    # picture
+    - type: id_help
+      project_name: "校内喂食指南"
+      project_excerpt: "救助"
+      img: ":project2_thumb.jpg"
+      img_title: "img title2"
+      date: "2024-10-12"
+      post: |
+        # Title
+        This is project content.
+
+        ![Image](:project2_thumb.jpg)
+
+    # quote
+    - type: id_adopt
+      project_name: "领养须知"
+      project_excerpt: "领养"
+      #img: ":project1_thumb.jpg"
+      #img_title: "img title3"
+      date: "2024-10-12"
+      post: |
+        Let me not to the marriage of true minds
+        Admit impediments. Love is not love
+        Which alters when it alteration finds,
+        Or bends with the remover to remove.
+        O no, it is an ever-fixed mark
+        That looks on tempests and is never shaken;
+        It is the star to every wand'ring barque,
+        Whose worth's unknown, although his height be taken.
+        Love's not Time's fool, though rosy lips and cheeks
+        Within his bending sickle's compass come;
+        Love alters not with his brief hours and weeks,
+        But bears it out even to the edge of doom.
+        If this be error and upon me proved,
+        I never writ, nor no man ever loved.
+    - type: id_quote
+      project_name: "示例项目"
+      project_excerpt: "Albert Einstein"
+      img: ":project2_thumb.jpg"
+      img_title: "img title4"
+      date: "2021-06-08"
+      post: |
+        Two things are infinite: the universe and human stupidity; and I'm not sure about the universe.
+    - type: id_quote
+      project_name: "示例项目"
+      project_excerpt: "Mae West"
+      img: ":project1_thumb.jpg"
+      img_title: "img title5"
+      date: "2021-08-20"
+      post: |
+        You only live once, but if you do it right, once is enough.
+    - type: id_quote
+      project_name: "示例项目"
+      project_excerpt: "Mahatma Gandhi "
+      img: ":project2_thumb.jpg"
+      img_title: "img title6"
+      date: "2021-12-20"
+      post: |
+        改变世界,从改变自己开始
+

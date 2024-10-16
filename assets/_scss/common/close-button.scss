@@ -1,0 +1,15 @@
+
+
+.close-button {
+  @include get_scheme(close-button-colors-);
+  vertical-align: middle;
+}
+
+.close-button > i{
+  color: var(--close-button-color);
+  font-size: 1.7rem;
+}
+
+.close-button > i:hover {
+  color: var(--close-button-hover-color);
+}

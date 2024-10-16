@@ -1,0 +1,15 @@
+
+
+{%- if site.data.conf.main.cookie_consent.side_nav_setting_button.tooltip -%}
+  {%- capture tooltip_setting_button -%}
+    data-toggle="tooltip" data-placement="top" title="{{ site.data.lang[lng].cookie_consent.side_nav_setting_button_tooltip }}"
+  {%- endcapture %}
+{%- endif -%}
+<div class="cookie-icon {{ include.effect }}" onclick="CookieConsent.showSettings();" {{ tooltip_setting_button }}>
+  <div class="cookie-wrapper">
+    <i class="fa-solid fa-cookie-bite" aria-hidden="true"></i>
+    <i class="fa-solid fa-cookie small-ellipse-icon" aria-hidden="true"></i>
+    <!-- <i class="fa-solid fa-spinner inner-icon" aria-hidden="true"></i> -->
+    <!-- <i class="fa-regular fa-circle outer-icon" aria-hidden="true"></i> -->
+  </div>
+</div>

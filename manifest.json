@@ -1,0 +1,111 @@
+{
+"protocol_handlers": [
+    {
+        "protocol": "mailto",
+        "url": "/newEmail?to=%s"
+    }
+], 
+"name": "上海大学猫盟",
+"name_en": "Shanghai University Cat Alliance",
+"short_name": "上大猫盟",
+"short_name_en": "SHU Cats",
+"start_url": "https://maomeng.online/",
+"scope": "https://maomeng.online/",
+"display": "standalone",
+"display_override": ["window-controls-overlay"],
+"description": "上海大学校内流浪猫联盟",
+"description_en": "Shanghai University Feral Cats' Union",
+"lang": "zh-CN",
+"dir": "auto",
+"theme_color": "#ffffff",
+"background_color": "#ffffff",
+"orientation": "any",
+"icons": [
+    {
+        "src": "/assets/img/favicons/web-app-manifest-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "maskable"
+    },
+    {
+        "src": "/assets/img/favicons/web-app-manifest-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any"
+    },
+    {
+        "src": "/assets/img/favicons/apple-touch-icon.png",
+        "sizes": "180x180",
+        "type": "image/png",
+        "purpose": "any"
+    },
+    {
+        "src": "/assets/img/favicons/favicon-48x48.png",
+        "sizes": "48x48",
+        "type": "image/png",
+        "purpose": "any"
+    },
+    {
+        "src": "/assets/img/favicons/favicon.svg",
+        "sizes": "any",
+        "type": "image/svg+xml",
+        "purpose": "any"
+    }
+],
+"screenshots": [
+    {
+        "src": "https://www.pwabuilder.com/assets/screenshots/screen1.png",
+        "sizes": "2880x1800",
+        "type": "image/png",
+        "description": "A screenshot of the home page"
+    }
+],
+
+"prefer_related_applications": false,
+"shortcuts": [
+    {
+        "name": "首页",
+        "name_en": "Home",
+        "url": "/",
+        "description": "上海大学猫盟首页",
+        "description_en": "Shanghai University Cats' Union homepage"
+    },
+    {
+        "name": "猫谱",
+        "name_en": "Cat info",
+        "url": "/tabs/blog/",
+        "description": "查看小猫档案",
+        "description_en": "View cat info"
+    },
+    {
+        "name": "回溯",
+        "name_en": "Stars",
+        "url": "/tabs/archive.html",
+        "description": "查看过去的小猫",
+        "description_en": "View Departed Cats"
+    },
+    {
+        "name": "科普",
+        "name_en": "Tips",
+        "url": "/tabs/projects.html",
+        "description": "查看校内救助活动",
+        "description_en": "View Cats' Union Activities"
+    },
+    {
+        "name": "盟友",
+        "name_en": "Allies",
+        "url": "/tabs/links.html",
+        "description": "查看谁在支持我们",
+        "description_en": "Check out supporters"
+    },
+    {
+        "name": "我们",
+        "name_en": "About Us",
+        "url": "/tabs/about.html",
+        "description": "了解我们",
+        "description_en": "Learn about us"
+    }
+],
+"categories": ["education", "social", "lifestyle", "animals", "non-profit", "charity", "community", "volunteering"],
+"offline_enabled": true
+}

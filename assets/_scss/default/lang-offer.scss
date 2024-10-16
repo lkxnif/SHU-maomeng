@@ -1,0 +1,36 @@
+
+
+.lang-offer {
+  @include get_scheme(lang-offer-colors-);
+  max-width: 450px;
+  min-width: 270px;
+  white-space: nowrap;
+  color: var(--lang-offer-text-color); // 普通文本颜色
+
+  h5 {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--lang-offer-header-color);
+  }
+
+  a {
+    color: var(--lang-offer-link-color); // 链接颜色
+    transition: color 0.3s ease; // 过渡效果
+
+    &:hover {
+      color: var(--lang-offer-link-hover-color); // 链接悬停颜色
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .lang-offer {
+    min-width: 250px;
+  }
+}
+
+@media (max-width: 360px) {
+  .lang-offer {
+    min-width: unset;
+  }
+}

@@ -61,7 +61,7 @@ page_data:
     # 个人支持
     - type: id_personal
       title: "Github猫盟开源项目"
-      url: "https://github.com/lkxnif/shu-maomeng"
+      url: "https://github.com/lkxnif/SHU-maomeng"
       info: "基于 GitHub Pages 和 Jekyll 构建的猫盟开源项目"
 
     # 友情链接

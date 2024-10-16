@@ -49,7 +49,7 @@ meta_common_description: "猫盟信息"
 # comment to remove any contact item
 contacts:
   - bilibili: "484930543"
-  - github: "lkxnif/shu-maomeng"
+  - github: "lkxnif/SHU-maomeng"
   - email: "lkxnif@gmail.com"
   #- linkedin: ""
   #- twitter: ""
@@ -70,7 +70,7 @@ comments:
   # - Get the corresponding items and fill in the items below.
   # For other settings, please check the _data/conf/posts.yml file.
   giscus:
-    repo: "lkxnif/shu-maomeng"
+    repo: "lkxnif/SHU-maomeng"
     repo-id: "R_kgDOM1dS3g"
     category: "Announcements"
     category-id: "DIC_kwDOM1dS3s4Ci2yu"

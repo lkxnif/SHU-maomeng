@@ -48,7 +48,7 @@ meta_common_description: "Your meta description."
 # the order of the items will be shown as here.
 # comment to remove any contact item
 contacts:
-  - github: "lkxnif/shu-maomeng"
+  - github: "lkxnif/SHU-maomeng"
   - email: "lkxnif@gmail.com"
   #- linkedin: ""
   #- twitter: ""
@@ -69,10 +69,10 @@ comments:
   # - Get the corresponding items and fill in the items below.
   # For other settings, please check the _data/conf/posts.yml file.
   giscus:
-    repo: "lkxnif/shu-maomeng"
-    repo-id: "R_kgDOM1dS3g"
+    repo: "lkxnif/SHU-maomeng"
+    repo-id: "R_kgDONBB7OQ"
     category: "Announcements"
-    category-id: "DIC_kwDOM1dS3s4Ci2yu"
+    category-id: "DIC_kwDONBB7Oc4CjaC4"
 
 # if no id is provided, this feature will be disabled.
 # make sure your environment does not match with google.analytics.ignore in _data/conf/main.yml

@@ -14,10 +14,10 @@
       "enabled": false
     }
   },
-  "host": "https://lkxnif.github.io/shu-maomeng",
-  "iconUrl": "https://lkxnif.github.io/shu-maomeng/assets/img/favicons/android-chrome-512x512.png",
-  "maskableIconUrl": "https://lkxnif.github.io/shu-maomeng/assets/img/favicons/android-chrome-512x512.png",
-  "monochromeIconUrl": "https://lkxnif.github.io/shu-maomeng/assets/img/favicons/android-chrome-512x512.png",
+  "host": "https://lkxnif.github.io/SHU-maomeng",
+  "iconUrl": "https://lkxnif.github.io/SHU-maomeng/assets/img/favicons/android-chrome-512x512.png",
+  "maskableIconUrl": "https://lkxnif.github.io/SHU-maomeng/assets/img/favicons/android-chrome-512x512.png",
+  "monochromeIconUrl": "https://lkxnif.github.io/SHU-maomeng/assets/img/favicons/android-chrome-512x512.png",
   "includeSourceCode": false,
   "isChromeOSOnly": false,
   "launcherName": "上大猫盟",
@@ -31,32 +31,32 @@
   "shortcuts": [
     {
       "name": "首页",
-      "url": "/shu-maomeng/",
+      "url": "/SHU-maomeng/",
       "description": "上海大学猫盟首页"
     },
     {
       "name": "猫谱",
-      "url": "/shu-maomeng/tabs/blog/",
+      "url": "/SHU-maomeng/tabs/blog/",
       "description": "查看小猫档案"
     },
     {
       "name": "回溯",
-      "url": "/shu-maomeng/tabs/archive.html",
+      "url": "/SHU-maomeng/tabs/archive.html",
       "description": "查看过去的小猫"
     },
     {
       "name": "科普",
-      "url": "/shu-maomeng/tabs/projects.html",
+      "url": "/SHU-maomeng/tabs/projects.html",
       "description": "查看校内救助活动"
     },
     {
       "name": "盟友",
-      "url": "/shu-maomeng/tabs/links.html",
+      "url": "/SHU-maomeng/tabs/links.html",
       "description": "查看谁在支持我们"
     },
     {
       "name": "我们",
-      "url": "/shu-maomeng/tabs/about.html",
+      "url": "/SHU-maomeng/tabs/about.html",
       "description": "了解我们"
     }
   ],
@@ -72,9 +72,9 @@
   },
   "signingMode": "new",
   "splashScreenFadeOutDuration": 300,
-  "startUrl": "/shu-maomeng/",
+  "startUrl": "/SHU-maomeng/",
   "themeColor": "#FFFFFF",
   "themeColorDark": "#FFFFFF",
   "shareTarget": [],
-  "webManifestUrl": "https://lkxnif.github.io/shu-maomeng/manifest.json"
+  "webManifestUrl": "https://lkxnif.github.io/SHU-maomeng/manifest.json"
 }

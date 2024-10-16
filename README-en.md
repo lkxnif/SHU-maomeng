@@ -16,7 +16,7 @@
 <div align="center">
   <img src="https://jekyll-theme-mrgreen-demo.mrgreensworkshop.com/assets/img/posts/mock1.jpg" max-height="500" alt="screen_mock">
   <br><br>
-  <a href="https://lkxnif.github.io/shu-maomeng/" style="font-weight: bold;" >Click here for live demo</a>
+  <a href="https://lkxnif.github.io/SHU-maomeng/" style="font-weight: bold;" >Click here for live demo</a>
 </div>
 
 

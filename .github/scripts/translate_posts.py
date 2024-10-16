@@ -64,6 +64,12 @@ def process_file(file_path):
         filename = os.path.basename(file_path)
         title = front_matter.get('title', 'untitled')
         front_matter['lng_pair'] = generate_lng_pair(filename, title)
+        
+        # 更新原始中文文件的front matter
+        updated_content = "---\n" + yaml.dump(front_matter, allow_unicode=True) + "---\n" + remaining_content
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(updated_content)
+        print(f"已更新原始文件的lng_pair: {file_path}")
     
     # 翻译内容
     translated_content = translate_text(remaining_content)

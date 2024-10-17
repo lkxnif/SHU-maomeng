@@ -1,3 +1,10 @@
+"""
+Copyright (c) 2024 lkxnif
+MIT License
+
+This script is used for automatically translating posts from Chinese to English.
+"""
+
 import os
 import re
 import yaml

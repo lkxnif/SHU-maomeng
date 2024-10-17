@@ -1,7 +1,11 @@
 ---
 layout: util/compress_js
 ---
-
+/*
+ * Copyright (c) 2022 Mr. Green's Workshop
+ * Modified by lkxnif, 2024
+ * MIT License
+ */
 
 {% include_relative _js/default/nav/close-top-nav-on-outside-click.js %}
 {% include_relative _js/default/tooltip-init.js %}

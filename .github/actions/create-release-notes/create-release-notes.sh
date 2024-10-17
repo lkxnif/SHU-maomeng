@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 
-
 source ${GITHUB_ACTION_PATH}/../common/githubApiCalls.sh
 
 # check the branch name

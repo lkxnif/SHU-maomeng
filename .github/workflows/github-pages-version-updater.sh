@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 
-
 source .github/actions/common/githubApiCalls.sh
 
 # setting bots username and email

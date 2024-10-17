@@ -1,5 +1,7 @@
 ---
-
+# Copyright (c) 2022 Mr. Green's Workshop
+# Modified by lkxnif, 2024
+# MIT License
 
 layout: util/compress
 ---

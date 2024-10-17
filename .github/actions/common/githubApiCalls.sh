@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 
 # check the token
 if [[ -z "${GITHUB_TOKEN}" ]]; then

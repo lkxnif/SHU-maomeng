@@ -62,10 +62,9 @@ Thank you for your contributions!
 
 ## License
 
-As it says in the [MIT license](https://github.com/MrGreensWorkshop/MrGreen-JekyllTheme/blob/main/LICENSE.txt), you can use this theme anywhere as long as you include the license and copyright notice.
+This project is based on MrGreensWorkshop's Jekyll template and is licensed under the [MIT License](https://github.com/lkxnif/SHU-maomeng/blob/main/LICENSE.txt). You can use this theme anywhere, provided you include the license and copyright notice.
 
-`Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com`
-
-Please add link to my page or leave the "Pwrd by Mr. Green" link in the footer so I can get credit for my work.
-
-Thank you!
+```
+Original Jekyll template Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+Modified work Copyright (c) 2024 lkxnif https://maomeng.online/
+```

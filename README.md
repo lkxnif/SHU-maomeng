@@ -89,7 +89,6 @@
 本项目基于 MrGreensWorkshop 的 Jekyll 模板，使用 [MIT 许可证](https://github.com/lkxnif/SHU-maomeng/blob/main/LICENSE.txt)。你可以在任何地方使用这个主题，只要你包括许可证和版权声明。
 
 ```
-原始 Jekyll 模板版权所有 (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
-修改工作版权所有 (c) 2024 lkxnif
+Copyright (c) 2022 Mr. Green's Workshop https://www.MrGreensWorkshop.com
+Modified work Copyright (c) 2024 lkxnif https://maomeng.online/
 ```
-
